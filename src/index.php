@@ -10,6 +10,7 @@
 
 <body>
     <h1 class="text-green-900">Hello World</h1>
+    <a href="./register.php">Register Akun</a>
 </body>
 
 </html>
