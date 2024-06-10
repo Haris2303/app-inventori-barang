@@ -1,4 +1,4 @@
-# Konfigurasi Awal Tailwind CSS
+# Aplikasi Inventori Barang
 
 Dokumentasi ini menjelaskan pembuatan Projek Aplikasi Inventori Barang.
 
