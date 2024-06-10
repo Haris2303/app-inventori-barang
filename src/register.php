@@ -10,7 +10,11 @@
 <body>
 
     <h1>Register Akun</h1>
+<<<<<<< HEAD
     <form action="services/register.php" method="post">
+=======
+    <form action="" method="post">
+>>>>>>> 434a05e54c76aa65a7b4fe59e226ebb2f5b34956
         <label for="name">Name</label>
         <input type="text" name="name" id="name"><br>
         <label for="email">Email</label>
@@ -25,7 +29,11 @@
             <option value="staff">Staff</option>
             <option value="kasir">Kasir</option>
             <option value="user">User</option>
+<<<<<<< HEAD
         </select><br>
+=======
+        </select>
+>>>>>>> 434a05e54c76aa65a7b4fe59e226ebb2f5b34956
         <button type="submit" name="register">Register</button>
     </form>
 
