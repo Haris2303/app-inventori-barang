@@ -45,8 +45,7 @@ if (isset($_POST['register'])) {
         '$name',
         '$email',
         '$password',
-        '$password_konfirmasi',
-        '$roles',
+        '$role',
         NOW(),
         NOW())
     ";
