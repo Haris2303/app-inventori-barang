@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 define('BASEURL', 'http://localhost/app_inventori_barang/src');
 
 $host = "localhost";

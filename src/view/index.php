@@ -10,7 +10,8 @@
 
 <body>
     <h1 class="text-green-900">Hello World</h1>
-    <a href="./register.php">Register Akun</a>
+    <a href="./register.php">Register Akun</a><br>
+    <a href="./login.php">Login Akun</a>
 </body>
 
 </html>

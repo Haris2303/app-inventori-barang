@@ -3,7 +3,7 @@
 require_once '../config/conn.php';
 
 // http://localhost/app_inventori_barang/src/register/
-$href = "document.location.href = '" . BASEURL . "/register.php'";
+$href = "document.location.href = '" . BASEURL . "/view/register.php'";
 
 // cek apakah tombol register ditekan
 if (isset($_POST['register'])) {

@@ -1,3 +1,14 @@
+<?php
+
+require_once '../config/conn.php';
+
+if (isset($_SESSION['is_login'])) {
+    header('Location: ' . BASEURL . '/view/dashboard.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +21,7 @@
 <body>
 
     <h1>Register Akun</h1>
-    <form action="services/register.php" method="post">
+    <form action="../services/register.php" method="post">
         <label for="name">Name</label>
         <input type="text" name="name" id="name"><br>
         <label for="email">Email</label>
