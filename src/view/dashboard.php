@@ -1,3 +1,9 @@
+<?php
+
+require_once '../services/user.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +14,30 @@
 </head>
 
 <body>
-    <h1>Ini halaman Dashboard</h1>
+    <a href="../services/logout.php">Logout</a>
+
+    <h1>Data Users</h1>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Aksi</th>
+        </tr>
+        <?php $i = 1 ?>
+        <?php foreach (selectAll() as $row) : ?>
+            <tr>
+                <td><?= $i++ ?></td>
+                <td><?= $row['name'] ?></td>
+                <td><?= $row['email'] ?></td>
+                <td><?= $row['roles'] ?></td>
+                <td><a href="#">Edit</a> | <a href="#">Hapus</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
 </body>
 
 </html>
