@@ -1,6 +1,12 @@
 <?php
 
+require_once '../config/conn.php';
 require_once '../services/user.php';
+
+if (!isset($_SESSION['is_login'])) {
+    header('Location: ' . BASEURL . '/view/login.php');
+    exit;
+}
 
 ?>
 
