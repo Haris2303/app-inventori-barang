@@ -14,8 +14,11 @@ require_once '../services/user.php';
 </head>
 
 <body>
+<<<<<<< HEAD
     <a href="../services/logout.php">Logout</a>
 
+=======
+>>>>>>> 8d8061b6f1a00e21ec376ba5a54e2c25dd384662
     <h1>Data Users</h1>
 
     <table border="1" cellpadding="10" cellspacing="0">
