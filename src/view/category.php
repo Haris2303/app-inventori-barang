@@ -8,7 +8,7 @@ if (!isset($_SESSION['is_login'])) {
 }
 
 if (isset($_GET['id'])) {
-    delete($_GET['id']);
+    deleteCategory($_GET['id']);
     echo "
     <script>
         alert('Category berhasil dihapus')
@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
             <th>Aksi</th>
         </tr>
         <?php $i = 1 ?>
-        <?php foreach (selectAll() as $row) : ?>
+        <?php foreach (selectAllCategory() as $row) : ?>
             <tr>
                 <td><?= $i++ ?></td>
                 <td><?= $row['name'] ?></td>

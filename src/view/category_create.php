@@ -8,7 +8,7 @@ if (!isset($_SESSION['is_login'])) {
 }
 
 if (isset($_POST['tambah'])) {
-    if (create($_POST)) {
+    if (createCategory($_POST)) {
         echo "
         <script>
             alert('Category berhasil ditambahkan')

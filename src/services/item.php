@@ -1,6 +1,7 @@
 <?php
 
 require_once '../config/conn.php';
+require_once '../services/stock.php';
 
 function selectAllItems()
 {
@@ -28,12 +29,7 @@ function createItem($data)
     $user_id = $data['user_id'];
 
     // insert stock
-    $sql = "INSERT INTO stocks VALUES(NULL, $stock, NOW(), NOW())";
-
-    $stock_id = NULL;
-    if ($connection->query($sql)) {
-        $stock_id = $connection->insert_id;
-    }
+    $stock_id = createStock($stock);
 
     $sql = "INSERT INTO items VALUES(NULL, '$name', '$description', '$price', $stock_id, $category_id, $user_id, NOW(), NOW())";
     return $connection->query($sql);
