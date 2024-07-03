@@ -2,11 +2,12 @@
 
 require_once '../config/conn.php';
 
-function selectAllStock()
+function selectStockById($id)
 {
     global $connection;
-    $sql = "SELECT * FROM categories";
-    return $connection->query($sql);
+    $sql = "SELECT * FROM stocks WHERE id = $id";
+    $result = $connection->query($sql);
+    return $result->fetch_assoc();
 }
 
 function deleteStock($id)
@@ -19,6 +20,6 @@ function deleteStock($id)
 function createStock($stock): int
 {
     global $connection;
-    $sql = "INSERT INTO stock VALUES(NULL, '$stock', NOW(), NOW())";
+    $sql = "INSERT INTO stocks VALUES(NULL, '$stock', NOW(), NOW())";
     return $connection->query($sql) ? $connection->insert_id : 0;
 }

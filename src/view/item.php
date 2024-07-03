@@ -1,6 +1,8 @@
 <?php
 
 require_once '../services/category.php';
+require_once '../services/item.php';
+require_once '../services/stock.php';
 
 if (!isset($_SESSION['is_login'])) {
     header('Location: ' . BASEURL . '/view/login.php');
@@ -37,21 +39,27 @@ if (isset($_GET['id'])) {
 
     <a href="item_create.php">Tambah Items</a>
 
-    <!-- <table border="1" cellpadding="10" cellspacing="0">
+    <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Nama</th>
+            <th>Harga</th>
+            <th>Stock</th>
+            <th>Deskripsi</th>
             <th>Aksi</th>
         </tr>
         <?php $i = 1 ?>
-        <?php foreach (selectAll() as $row) : ?>
+        <?php foreach (selectAllItems() as $row) : ?>
             <tr>
                 <td><?= $i++ ?></td>
                 <td><?= $row['name'] ?></td>
+                <td><?= $row['price'] ?></td>
+                <td><?= selectStockById($row['stock_id'])['total'] ?></td>
+                <td><?= $row['description'] ?></td>
                 <td><a href="<?= BASEURL ?>/view/category.php?id=<?= $row['id'] ?>">Hapus</a></td>
             </tr>
         <?php endforeach; ?>
-    </table> -->
+    </table>
 
 </body>
 

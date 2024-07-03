@@ -52,7 +52,7 @@ if (isset($_POST['tambah'])) {
         <input type="number" name="stock" id="stock"><br>
         <label for="category_id">Category</label>
         <select name="category_id" id="category_id">
-            <?php foreach (selectAll() as $row) : ?>
+            <?php foreach (selectAllCategory() as $row) : ?>
                 <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
             <?php endforeach ?>
         </select>

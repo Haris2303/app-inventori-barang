@@ -6,7 +6,7 @@ require_once '../services/stock.php';
 function selectAllItems()
 {
     global $connection;
-    $sql = "SELECT * FROM categories";
+    $sql = "SELECT * FROM items";
     return $connection->query($sql);
 }
 
