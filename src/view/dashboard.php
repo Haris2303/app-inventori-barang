@@ -32,6 +32,7 @@ if (isset($_GET['id'])) {
 
     <a href="user.php">Users</a>
     <a href="category.php">Categories</a>
+    <a href="item.php">Items</a>
     <a href="../services/logout.php">Logout</a>
 
 </body>

@@ -31,14 +31,13 @@ if (isset($_GET['id'])) {
 <body>
     <a href="dashboard.php">Dashboard</a>
     <a href="user.php">Users</a>
-    <a href="item.php">Items</a>
     <a href="../services/logout.php">Logout</a>
 
-    <h1>Data Categories</h1>
+    <h1>Data Items</h1>
 
-    <a href="category_create.php">Tambah Category</a>
+    <a href="item_create.php">Tambah Items</a>
 
-    <table border="1" cellpadding="10" cellspacing="0">
+    <!-- <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Nama</th>
@@ -52,7 +51,7 @@ if (isset($_GET['id'])) {
                 <td><a href="<?= BASEURL ?>/view/category.php?id=<?= $row['id'] ?>">Hapus</a></td>
             </tr>
         <?php endforeach; ?>
-    </table>
+    </table> -->
 
 </body>
 

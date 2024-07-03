@@ -19,6 +19,7 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $row['password'])) {
             // set session
             $_SESSION['is_login'] = true;
+            $_SESSION['user_id'] = $row['id'];
             // arahkan ke halaman aplikasi
             header('location: ' . BASEURL . '/view/dashboard.php');
             exit;
