@@ -20,7 +20,6 @@ if (isset($_POST['tambah'])) {
         echo "
         <script>
             alert('Item gagal ditambahkan')
-            document.location.href = '" . BASEURL . "/view/item.php'
         </script>";
         exit;
     }

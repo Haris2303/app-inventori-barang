@@ -1,8 +1,6 @@
 <?php
 
-require_once '../services/category.php';
 require_once '../services/item.php';
-require_once '../services/stock.php';
 
 if (!isset($_SESSION['is_login'])) {
     header('Location: ' . BASEURL . '/view/login.php');
@@ -45,6 +43,7 @@ if (isset($_GET['id'])) {
             <th>Nama</th>
             <th>Harga</th>
             <th>Stock</th>
+            <th>Kategori</th>
             <th>Deskripsi</th>
             <th>Aksi</th>
         </tr>
@@ -54,7 +53,8 @@ if (isset($_GET['id'])) {
                 <td><?= $i++ ?></td>
                 <td><?= $row['name'] ?></td>
                 <td><?= $row['price'] ?></td>
-                <td><?= selectStockById($row['stock_id'])['total'] ?></td>
+                <td><?= $row['total'] ?></td>
+                <td><?= $row['category_name'] ?></td>
                 <td><?= $row['description'] ?></td>
                 <td><a href="<?= BASEURL ?>/view/category.php?id=<?= $row['id'] ?>">Hapus</a></td>
             </tr>
